@@ -26,9 +26,9 @@ alter table livros add preco decimal(5,2);
 alter table categorias add quantidade int;
 
 insert into autores (id, nome, nacionalidade) values
-(1, 'j.k. rowling', 'britânica'),
-(2, 'george orwell', 'britânico'),
-(3, 'harper lee', 'americana');
+(1, 'Gustavo Goulart', 'britânico'),
+(2, 'Jesus Cristo', 'Céu'),
+(3, 'Vinicius Junior', 'Brasileiro');
 
 insert into categorias (id, descricao, quantidade) values
 (1, 'ficção', 10),
@@ -37,17 +37,17 @@ insert into categorias (id, descricao, quantidade) values
 
 insert into livros (id, titulo, ano_publicacao, id_autor, id_categoria, preco) values
 (1, 'harry potter e a pedra filosofal', 1997, 1, 3, 39.90),
-(2, '1984', 1949, 2, 1, 29.90),
-(3, 'o sol é para todos', 1960, 3, 2, 24.90);
+(2, 'Biblia', 1949, 2, 1, 29.90),
+(3, 'O pequeno principe', 1960, 3, 2, 24.90);
 
-insert into autores (id, nome, nacionalidade) values (4, 'gabriel garcía márquez', 'colombiano');
-insert into livros (id, titulo, ano_publicacao, id_autor, id_categoria, preco) values (4, 'cem anos de solidão', 1967, 4, 1, 49.90);
+insert into autores (id, nome, nacionalidade) values (4, 'gabriel guilhem', 'paraguaio');
+insert into livros (id, titulo, ano_publicacao, id_autor, id_categoria, preco) values (4, 'Diario de um banana', 1967, 4, 1, 49.90);
 
 update categorias set descricao = 'romance' where id = 1;
 
 update livros set preco = preco * 1.10 where ano_publicacao < 2000;
 
-update autores set nome = 'gabriel garcía márquez' where id = 4; 
+update autores set nome = 'gabriel guilhem' where id = 4; 
 
 delete from livros where ano_publicacao < 1950;
 
